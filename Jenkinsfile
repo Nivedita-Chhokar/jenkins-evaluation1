@@ -12,28 +12,28 @@ pipeline {
         //install the dependencies
         stage ("Install dependencies") {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         
         //to run test
         stage ("Run Tests") {
             steps {
-                sh 'npm test || echo "No tests defined"'
+                bat 'npm test || echo "No tests defined"'
             }
         }
         
         //for building the application
         stage ("Build") {
             steps {
-                sh 'npm run build' 
+                bat 'npm run build' 
             }
         }
 
         //for docker image
         stage ("Docker Container") {
             steps {
-                sh 'docker build -t jenkins-evaluation1 .'
+                bat 'docker build -t jenkins-evaluation1 .'
             }
         }
     }
