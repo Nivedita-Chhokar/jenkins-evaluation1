@@ -9,6 +9,7 @@ pipeline {
         //for cloning the repository
         stage ("Clone Repository") {
             steps {
+                echo "cloning repo..."
                 git "https://github.com/Nivedita-Chhokar/jenkins-evaluation1.git"
             }
         }
