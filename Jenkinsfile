@@ -1,5 +1,9 @@
 pipeline {
     agent any
+
+    tools {
+        nodejs 'Node 22'
+    }
     
     stages {
         //for cloning the repository
