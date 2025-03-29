@@ -5,7 +5,7 @@ pipeline {
         stage ("Clone Repository") {
             steps {
                 echo "Cloning repository..."
-                git 'https://github.com/Nivedita-Chhokar/jenkins-evaluation1.git'
+                git branch: 'main', url: 'https://github.com/Nivedita-Chhokar/jenkins-evaluation1.git'
             }
         }
         
